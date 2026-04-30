@@ -1,0 +1,108 @@
+/* Shared Scroll Animations - CSS Module */
+
+/* Base animation states - starts hidden */
+.fadeInUp,
+.fadeInLeft,
+.fadeInRight,
+.scaleIn {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animation directions */
+.fadeInUp {
+  transform: translateY(40px);
+}
+
+.fadeInLeft {
+  transform: translateX(-40px);
+}
+
+.fadeInRight {
+  transform: translateX(40px);
+}
+
+.scaleIn {
+  transform: scale(0.95);
+}
+
+/* Animation trigger states */
+.animateIn {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Staggered delays */
+.delay1 { transition-delay: 0.1s; }
+.delay2 { transition-delay: 0.2s; }
+.delay3 { transition-delay: 0.3s; }
+.delay4 { transition-delay: 0.4s; }
+.delay5 { transition-delay: 0.5s; }
+.delay6 { transition-delay: 0.6s; }
+
+/* Card hover animation - for amenities, rooms, testimonials */
+.hoverCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.hoverCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Image hover zoom */
+.imageZoom {
+  transition: transform 0.4s ease;
+}
+
+.imageZoom:hover {
+  transform: scale(1.05);
+}
+
+/* Button hover effect */
+.buttonHover {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hero content animation */
+.heroContent {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.heroContent.animateIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive - reduce animation on mobile */
+@media (max-width: 767px) {
+  .fadeInUp,
+  .fadeInLeft,
+  .fadeInRight,
+  .scaleIn {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  
+  .heroContent {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .fadeInUp,
+  .fadeInLeft,
+  .fadeInRight,
+  .scaleIn,
+  .heroContent,
+  .imageZoom,
+  .hoverCard {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "attractions": [
+    {
+      "id": 1,
+      "name": "Madhe Ghat Waterfall  (monsoon spot near Velhe)",
+      "description": "Located approximately 15 km from the property, Madhe Ghat Waterfall is a breathtaking monsoon destination known for its cascading falls and serene natural surroundings. It offers a perfect escape into the lush greenery of the Sahyadri ranges.",
+      "distance": "15 km",
+      "image": "/durg bhumi gallery/02.png"
+    },
+    {
+      "id": 2,
+      "name": "Torna Fort (Prachandagad)",
+      "description": "Situated around 25 km away, Torna Fort, also known as Prachandagad, is a historically significant fort and the first fort captured by Chhatrapati Shivaji Maharaj. It offers panoramic views and an enriching heritage experience.",
+      "distance": "25 km",
+      "image": "/durg bhumi gallery/03.png"
+    },
+    {
+      "id": 3,
+      "name": "Rajgad Fort (Velhe belt)",
+      "description": "Located approximately 30 km from the resort, Rajgad Fort is one of the grandest forts in Maharashtra and served as the capital of the Maratha Empire for many years. It is known for its expansive structure and scenic trekking trails.",
+      "distance": "30 km",
+      "image": "/durg bhumi gallery/04.png"
+    },
+    {
+      "id": 4,
+      "name": "Panshet Dam / lake views & leisure",
+      "description": "About 20 km from the property, Panshet Dam is a popular destination offering tranquil lake views and recreational activities. It is ideal for a peaceful outing amidst nature with opportunities for relaxation and photography.",
+      "distance": "20 km",
+      "image": "/durg bhumi gallery/05.png"
+    }
+  ]
+}

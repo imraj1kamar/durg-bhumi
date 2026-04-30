@@ -1,0 +1,48 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Forest View Deluxe",
+      "description": "Spacious room with panoramic forest views, king-size bed, and private balcony.",
+      "price": "₹8,500",
+      "perNight": true,
+      "image": "/durg bhumi gallery/room2.jpeg",
+      "features": ["King Bed", "Forest View", "Balcony", "WiFi", "AC"],
+      "size": "450 sq ft",
+      "guests": 2
+    },
+    {
+      "id": 2,
+      "name": "Garden Suite",
+      "description": "Elegant suite opening to lush gardens with a private sit-out and luxury amenities.",
+      "price": "₹12,000",
+      "perNight": true,
+      "image": "/durg bhumi gallery/garden-area.jpeg",
+      "features": ["King Bed", "Garden Access", "Bathtub", "Mini Bar", "WiFi"],
+      "size": "600 sq ft",
+      "guests": 2
+    },
+    {
+      "id": 3,
+      "name": "Family Cottage",
+      "description": "Perfect for families with two bedrooms, a living area, and a private patio.",
+      "price": "₹15,500",
+      "perNight": true,
+      "image": "/durg bhumi gallery/room.jpeg",
+      "features": ["2 Bedrooms", "Living Room", "Kitchenette", "Patio", "WiFi"],
+      "size": "900 sq ft",
+      "guests": 4
+    },
+    {
+      "id": 4,
+      "name": "Presidential Villa",
+      "description": "The ultimate luxury experience with a private pool, butler service, and stunning views.",
+      "price": "₹25,000",
+      "perNight": true,
+      "image": "/durg bhumi gallery/luxery-room.jpeg",
+      "features": ["Private Pool", "Butler Service", "2 Bedrooms", "Dining Room", "Spa Access"],
+      "size": "1500 sq ft",
+      "guests": 4
+    }
+  ]
+}

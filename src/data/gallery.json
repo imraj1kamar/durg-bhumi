@@ -1,0 +1,53 @@
+{
+  "gallery": [
+    {
+      "id": 1,
+      "src": "/durg bhumi gallery/wada.jpeg",
+      "alt": "Resort Exterior",
+      "category": "resort"
+    },
+    {
+      "id": 2,
+      "src": "/durg bhumi gallery/luxery-room.jpeg",
+      "alt": "Luxury Room",
+      "category": "rooms"
+    },
+    {
+      "id": 3,
+      "src": "/durg bhumi gallery/garden-area.jpeg",
+      "alt": "Garden View",
+      "category": "nature"
+    },
+    {
+      "id": 4,
+      "src": "/durg bhumi gallery/morning-view.jpeg",
+      "alt": "Morning View",
+      "category": "resort"
+    },
+    {
+      "id": 5,
+      "src": "/durg bhumi gallery/room-view.jpeg",
+      "alt": "Room View",
+      "category": "rooms"
+    },
+    {
+      "id": 6,
+      "src": "/durg bhumi gallery/sun-set-view.jpeg",
+      "alt": "Sunset View",
+      "category": "nature"
+    },
+    {
+      "id": 7,
+      "src": "/durg bhumi gallery/room2.jpeg",
+      "alt": "Deluxe Room",
+      "category": "rooms"
+    },
+    {
+      "id": 8,
+      "src": "/durg bhumi gallery/washroom.jpeg",
+      "alt": "Washroom",
+      "category": "amenities"
+    }
+  ]
+}
+

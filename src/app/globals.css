@@ -1,0 +1,241 @@
+:root {
+
+  /* ===============================
+     PRIMARY COLORS
+  =============================== */
+
+  --primary-color: #556B2F;      /* Olive Green */
+  --primary-light: #6E8445;
+  --primary-dark: #3E4F21;
+
+  --secondary-color: #8B5E3C;    /* Earth Brown */
+  --secondary-light: #A5744F;
+  --secondary-dark: #6A452B;
+
+  --accent-color: #F5F0E6;       /* Warm Beige */
+  --accent-dark: #E7DDCC;
+
+  /* ===============================
+     TEXT COLORS
+  =============================== */
+
+  --text-dark: #1F1F1F;
+  --text-light: #FFFFFF;
+  --text-gray: #666666;
+  --text-muted: #8A8A8A;
+
+  /* ===============================
+     BACKGROUND COLORS
+  =============================== */
+
+  --bg-light: #FFFFFF;
+  --bg-section: #FAF8F3;
+  --bg-dark: #2F241C;
+
+  /* ===============================
+     STATUS COLORS
+  =============================== */
+
+  --success: #4E7D43;
+  --warning: #D9A441;
+  --danger: #C94B4B;
+
+  /* ===============================
+     FONTS
+  =============================== */
+
+  --font-primary: 'Poppins', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  /* ===============================
+     FONT SIZES
+  =============================== */
+
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-md: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 24px;
+  --fs-xxl: 38px;
+  --fs-hero: 60px;
+
+  /* ===============================
+     SPACING
+  =============================== */
+
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 70px;
+
+  /* ===============================
+     BORDER RADIUS
+  =============================== */
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-round: 50px;
+
+  /* ===============================
+     SHADOWS
+  =============================== */
+
+  --shadow-sm: 0 4px 10px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 25px rgba(0,0,0,0.12);
+  --shadow-lg: 0 15px 45px rgba(0,0,0,0.18);
+
+  /* ===============================
+     TRANSITION
+  =============================== */
+
+  --transition: all 0.3s ease;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+  background: var(--bg-light);
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: var(--font-heading);
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+section{
+  width: 103%;
+}
+
+.btn-primary{
+  background: var(--secondary-color);
+  color: white;
+  padding: 14px 28px;
+  border:none;
+  border-radius: var(--radius-round);
+  cursor:pointer;
+  transition: var(--transition);
+}
+
+.btn-primary:hover{
+  background: var(--secondary-dark);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE UTILITIES
+=============================== */
+
+.text-break {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Gallery responsive heights */
+:root {
+  --gallery-tall: 400px;
+  --gallery-short: 250px;
+}
+
+/* ===============================
+   MEDIA QUERIES
+=============================== */
+
+@media (max-width: 767.98px) {
+  :root {
+    --fs-hero: 42px;
+    --fs-xxl: 30px;
+    --fs-xl: 20px;
+    --space-xl: 40px;
+    --space-lg: 24px;
+  }
+
+  .gallery-item-tall,
+  .gallery-item-short {
+    height: 220px !important;
+  }
+
+  :root {
+    --gallery-tall: 220px;
+    --gallery-short: 220px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  :root {
+    --fs-hero: 36px;
+    --fs-xxl: 26px;
+    --fs-xl: 18px;
+    --space-xl: 32px;
+    --space-lg: 20px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .gallery-item-tall,
+  .gallery-item-short {
+    height: 180px !important;
+  }
+
+  :root {
+    --gallery-tall: 180px;
+    --gallery-short: 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+ @media (max-width: 991px) {
+          #about .container > div {
+            grid-template-columns: 1fr !important;
+          }
+
+          #about h2 {
+            font-size: 48px !important;
+          }
+
+          #about div[style*="width: 130%"] {
+            width: 100% !important;
+            margin-left: 0 !important;
+          }
+        }
+
+        @media (max-width: 576px) {
+          #about h2 {
+            font-size: 38px !important;
+          }
+
+          #about p {
+            font-size: 16px !important;
+          }
+        }

@@ -1,0 +1,29 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Priya Sharma",
+      "location": "Mumbai",
+      "rating": 5,
+      "text": "An absolutely magical experience. The forest views from our room were breathtaking, and the staff made us feel like family.",
+"avatar": "/durg bhumi gallery/room-side.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Verma",
+      "location": "Delhi",
+      "rating": 5,
+      "text": "Perfect weekend getaway. The spa treatments were world-class, and the food was exceptional. Can't wait to return!",
+"avatar": "/durg bhumi gallery/room-view.jpeg"
+    },
+    {
+      "id": 3,
+      "name": "Ananya Patel",
+      "location": "Bangalore",
+      "rating": 5,
+      "text": "DurgBhumi Resort is a hidden gem. The nature trails, the peaceful ambiance, and the luxury rooms exceeded all expectations.",
+"avatar": "/durg bhumi gallery/garden-area-potrait.jpeg"
+    }
+  ]
+}
+

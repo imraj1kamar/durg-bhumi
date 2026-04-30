@@ -1,0 +1,41 @@
+{
+  "amenities": [
+    {
+      "id": 1,
+      "title": "Fine Dining",
+      "description": "Multi-cuisine restaurant serving farm-to-table delicacies with local flavors.",
+      "icon": "restaurant"
+    },
+    {
+      "id": 2,
+      "title": "Swimming Pool",
+      "description": "Infinity pool overlooking the forest with a separate kids' pool area.",
+      "icon": "pool"
+    },
+    {
+      "id": 3,
+      "title": "Spa & Wellness",
+      "description": "Rejuvenating spa treatments, yoga sessions, and meditation programs.",
+      "icon": "spa"
+    },
+    {
+      "id": 4,
+      "title": "Nature Trails",
+      "description": "Guided walking and cycling trails through the surrounding forests.",
+      "icon": "forest"
+    },
+    {
+      "id": 5,
+      "title": "Conference Hall",
+      "description": "State-of-the-art meeting and event spaces for corporate retreats.",
+      "icon": "meeting"
+    },
+    {
+      "id": 6,
+      "title": "Bonfire & BBQ",
+      "description": "Evening bonfire gatherings with live music and barbecue dinners.",
+      "icon": "fire"
+    }
+  ]
+}
+
