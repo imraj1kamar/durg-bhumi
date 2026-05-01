@@ -1,0 +1,121 @@
+/* Resort Overview Section Styles */
+
+.overviewSection {
+  padding: var(--space-md) 0;
+  background: var(--bg-section);
+}
+
+.container {
+  width: 95%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.label {
+  color: var(--primary-color);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-primary);
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, var(--fs-xxl));
+  color: var(--text-dark);
+  margin-bottom: var(--space-sm);
+  font-weight: 400;
+}
+
+.description {
+  color: var(--text-gray);
+  font-size: var(--fs-md);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: var(--font-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: var(--space-md);
+  align-items: stretch;
+}
+
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+}
+
+.featureColumn {
+  background: var(--secondary-dark);
+  padding: var(--space-lg) var(--space-lg);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+.featureList {
+  margin: 0;
+  padding-left: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.featureItem {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: var(--fs-lg);
+  font-family: var(--font-primary);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageColumn {
+    flex-direction: row;
+  }
+
+  .imageWrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .imageColumn {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    height: 180px;
+  }
+
+  .featureItem {
+    font-size: var(--fs-md);
+  }
+}

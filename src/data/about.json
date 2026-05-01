@@ -1,0 +1,24 @@
+{
+  "about": {
+    "heading": "About us",
+    "subtext": "DurgBhumi is exclusively managed and operated by",
+    "operator": "WanderNest Hospitality",
+    "tagline": "Curating Destinations. Crafting Experiences.",
+    "description": "WanderNest is a premium hospitality and experience-driven company dedicated to creating distinctive destinations and memorable moments. With a focus on thoughtful design, immersive environments, and elevated service, WanderNest curates hospitality experiences that blend luxury, culture, and contemporary lifestyle.",
+    "portfolio": [
+      {
+        "name": "DurgBhumi",
+        "description": "a luxury retreat resort inspired by heritage and nature"
+      },
+      {
+        "name": "Knliq",
+        "description": "Pune's premier rooftop resto-bar"
+      },
+      {
+        "name": "Flying Saucer, Bhopal",
+        "description": "a vibrant dining and social destination"
+      }
+    ],
+    "image": "/durg bhumi gallery/wada.jpeg"
+  }
+}

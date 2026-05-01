@@ -3,8 +3,11 @@
 import Image from "next/image";
 import { useEffect } from 'react';
 import styles from './About.module.css';
+import aboutData from '@/data/about.json';
 
 export default function About() {
+  const { about } = aboutData;
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
@@ -39,7 +42,7 @@ export default function About() {
           {/* LEFT IMAGE */}
           <div className={`${styles.imageContainer} image-container`}>
             <Image
-              src="/durg bhumi gallery/wada.jpeg"
+              src={about.image}
               alt="DurgBhumi Resort"
               fill
               priority
@@ -50,33 +53,31 @@ export default function About() {
           {/* RIGHT CONTENT */}
           <div className={styles.contentSide}>
             <h2 className={styles.heading}>
-              About us
+              {about.heading}
             </h2>
 
             <p className={styles.subtext}>
-              DurgBhumi is exclusively managed and operated by{" "}
-              <strong>WanderNest Hospitality</strong>
+              {about.subtext}{" "}
+              <strong>{about.operator}</strong>
             </p>
 
             <p className={styles.tagline}>
-              Curating Destinations. Crafting Experiences.
+              {about.tagline}
             </p>
 
             <div className={styles.brownBox}>
               <p className={styles.description}>
-                WanderNest is a premium hospitality and experience-driven company
-                dedicated to creating distinctive destinations and memorable
-                moments. With a focus on thoughtful design, immersive
-                environments, and elevated service, WanderNest curates
-                hospitality experiences that blend luxury, culture, and
-                contemporary lifestyle.
+                {about.description}
               </p>
 
               <p className={`${styles.portfolioText} portfolio-text`}>
-                Our growing portfolio includes DurgBhumi – a luxury retreat
-                resort inspired by heritage and nature, Knliq – Pune's premier
-                rooftop resto-bar, and Flying Saucer, Bhopal – a vibrant dining
-                and social destination.
+                Our growing portfolio includes{" "}
+                {about.portfolio.map((item, index) => (
+                  <span key={index}>
+                    {item.name} – {item.description}
+                    {index < about.portfolio.length - 1 ? ", " : "."}
+                  </span>
+                ))}
               </p>
             </div>
           </div>

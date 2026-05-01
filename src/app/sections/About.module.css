@@ -2,14 +2,14 @@
 
 .aboutSection {
   padding: var(--space-md) 0;
-  background: var(--bg-light);
+  background: var(--bg-section);
 }
 
 .aboutGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 720px;
-  background: #efefef;
+  background: var(--bg-light);
   overflow: hidden;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .contentSide {
-  background: #efefef;
+  background: var(--bg-light);
   padding: 60px 40px;
   position: relative;
   display: flex;
@@ -40,50 +40,56 @@
 .heading {
   font-size: 72px;
   font-weight: 400;
-  color: #9a623d;
+  color: var(--secondary-color);
   margin: 40px 0 20px;
-  font-family: Georgia, serif;
+  font-family: var(--font-heading);
   line-height: 1.1;
 }
 
 .subtext {
-  font-size: 20px;
+  font-size: var(--fs-lg);
   line-height: 1.6;
-  color: #111;
+  color: var(--text-dark);
   margin-bottom: 15px;
+  font-family: var(--font-primary);
 }
 
 .tagline {
-  font-size: 22px;
+  font-size: var(--fs-xl);
   font-style: italic;
-  color: #222;
+  color: var(--text-dark);
   margin-bottom: 40px;
+  font-family: var(--font-heading);
 }
 
 .brownBox {
-  background: #6a441f;
-  color: #fff;
+  background: var(--secondary-dark);
+  color: var(--text-light);
   padding: 35px;
   width: 130%;
   margin-left: -131px;
   margin-top: 10px;
   z-index: 2;
+  transition: var(--transition);
 }
 
 .description {
-  font-size: 18px;
-  line-height: 1.8;
-  margin-bottom: 30px;
+     color: rgba(255,255,255,0.85);
+    font-size: var(--fs-lg);
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+    line-height: 1.7;
 }
 
 .portfolioText {
-  font-size: 18px;
+  font-size: var(--fs-md);
   line-height: 1.8;
   margin: 0;
   opacity: 0;
   transform: translateX(-30px);
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition-delay: 0.2s;
+  font-family: var(--font-primary);
 }
 
 .portfolioText.animateIn {
@@ -109,14 +115,14 @@
 
 @media (max-width: 576px) {
   .heading {
-    font-size: 38px !important;
+    font-size: var(--fs-xxl) !important;
   }
 
   .subtext,
   .tagline,
   .description,
   .portfolioText {
-    font-size: 16px !important;
+    font-size: var(--fs-sm) !important;
   }
 }
 /* ✅ NEW IMAGE STYLE */
