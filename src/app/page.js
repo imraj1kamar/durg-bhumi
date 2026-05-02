@@ -12,23 +12,28 @@ import Contact from "./sections/Contact";
 
 export default function Home() {
   return (
-    <main className="container-fluid">
-<div className="row">
-        <Hero />
+   
+<><Hero />
+      <div className="container">
+         
         <About />
         <Rooms />
+         </div>
         <Amenities />
+        <div className="container">
         <NearbyAttractions />
         <Gallery />
+       
         <ResortOverview />
-
+ </div>
         <Testimonials />
         <Contact />
+     
 
-      </div>
+      </>
      
       
      
-    </main>
+   
   );
 }

@@ -16,7 +16,7 @@ export default function Footer() {
       }}
     >
       <div className="container">
-        <div className="row g-4">
+        <div className="row ">
           {/* Brand */}
           <div className="col-lg-4 col-md-6">
             <Image

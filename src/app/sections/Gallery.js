@@ -79,10 +79,68 @@ export default function Gallery() {
         background: "var(--bg-section)",
       }}
     >
-      <div className="container">
+      {/* <div className="container"> */}
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "var(--space-lg)" }}>
-          <p
+                       <div
+  data-animate
+  className={styles.fadeInUp}
+  style={{
+    textAlign: "center",
+    marginBottom: "var(--space-md)",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "10px",
+    }}
+  >
+    <span
+      style={{
+        width: "50px",
+        height: "2px",
+        background: "var(--primary-color)",
+        opacity: 0.5,
+      }}
+    ></span>
+
+    <div
+      style={{
+        width: "10px",
+        height: "10px",
+        border: "1px solid var(--primary-color)",
+        transform: "rotate(45deg)",
+      }}
+    ></div>
+
+    <span
+      style={{
+        width: "50px",
+        height: "2px",
+        background: "var(--primary-color)",
+        opacity: 0.5,
+      }}
+    ></span>
+  </div>
+
+  <p
+    style={{
+      color: "var(--primary-color)",
+      fontSize: "var(--fs-sm)",
+      textTransform: "uppercase",
+      letterSpacing: "5px",
+      fontWeight: 600,
+      marginTop: "12px",
+      marginBottom: 0,
+    }}
+  >
+    Gallery
+  </p>
+</div>
+          {/* <p
             data-animate
             className={styles.fadeInUp}
             style={{
@@ -95,7 +153,7 @@ export default function Gallery() {
             }}
           >
             Gallery
-          </p>
+          </p> */}
           <h2
             data-animate
             className={styles.fadeInUp}
@@ -183,7 +241,7 @@ export default function Gallery() {
             </div>
           ))}
         </div>
-      </div>
+      {/* </div> */}
 
       {/* Modal / Lightbox */}
       {isModalOpen && (

@@ -11,6 +11,7 @@ export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const checkMobile = () => setIsMobile(window.innerWidth < 992);
     checkMobile();
     window.addEventListener("resize", checkMobile);
@@ -18,6 +19,7 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
     };
@@ -27,6 +29,7 @@ export default function Navbar() {
 
   // Handle body scroll lock and animation timing
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     if (menuOpen) {
       document.body.style.overflow = "hidden";
       // small delay to trigger CSS transition
@@ -148,6 +151,7 @@ export default function Navbar() {
               cursor: "pointer",
             }}
             aria-label="Toggle menu"
+            suppressHydrationWarning={true}
           >
             ☰
           </button>

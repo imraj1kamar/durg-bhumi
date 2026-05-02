@@ -53,7 +53,7 @@ export default function Testimonials() {
       <div className="container">
         {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "var(--space-lg)" }}>
-          <p
+          {/* <p
             data-animate
             className={styles.fadeInUp}
             style={{
@@ -66,7 +66,65 @@ export default function Testimonials() {
             }}
           >
             Testimonials
-          </p>
+          </p> */}
+          <div
+  data-animate
+  className={styles.fadeInUp}
+  style={{
+    textAlign: "center",
+    marginBottom: "var(--space-md)",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "10px",
+    }}
+  >
+    <span
+      style={{
+        width: "50px",
+        height: "2px",
+        background: "var(--accent-color)",
+        opacity: 0.5,
+      }}
+    ></span>
+
+    <div
+      style={{
+        width: "10px",
+        height: "10px",
+        border: "1px solid var(--accent-color)",
+        transform: "rotate(45deg)",
+      }}
+    ></div>
+
+    <span
+      style={{
+        width: "50px",
+        height: "2px",
+        background: "var(--accent-color)",
+        opacity: 0.5,
+      }}
+    ></span>
+  </div>
+
+  <p
+    style={{
+      color: "var(--accent-color)",
+      fontSize: "var(--fs-sm)",
+      textTransform: "uppercase",
+      letterSpacing: "5px",
+      fontWeight: 600,
+      marginTop: "12px",
+      marginBottom: 0,
+    }}
+  >
+    Testimonials
+  </p>
+</div>
           <h2
             data-animate
             className={styles.fadeInUp}
@@ -95,7 +153,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="row g-4">
+        <div className="row " >
           {testimonials.map((testimonial, index) => (
             <div key={testimonial.id} className="col-md-6 col-lg-4">
               <div

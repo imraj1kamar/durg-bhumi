@@ -37,7 +37,7 @@ export default function About() {
 
   return (
     <section id="about" className={styles.aboutSection}>
-      <div className="container">
+   
         <div className={styles.aboutGrid}>
           {/* LEFT IMAGE */}
           <div className={`${styles.imageContainer} image-container`}>
@@ -83,7 +83,7 @@ export default function About() {
           </div>
         </div>
         
-      </div>
+    
     </section>
   );
 }

@@ -120,9 +120,7 @@ a{
   color:inherit;
 }
 
-section{
-  width: 103%;
-}
+
 
 .btn-primary{
   background: var(--secondary-color);
@@ -192,9 +190,7 @@ section{
     --space-lg: 20px;
   }
 
-  .container {
-    width: 92%;
-  }
+
 
   .gallery-item-tall,
   .gallery-item-short {
@@ -239,3 +235,4 @@ section{
             font-size: 16px !important;
           }
         }
+
