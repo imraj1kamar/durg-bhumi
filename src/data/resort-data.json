@@ -4,9 +4,19 @@
     "tagline": "Where Nature Meets Luxury",
     "description": "Nestled in the heart of pristine nature, DurgBhumi Resort offers an unparalleled escape from the ordinary. Experience world-class hospitality, elegant accommodations, and unforgettable moments surrounded by lush greenery.",
     "location": "Amidst the Serene Forests, DurgBhumi",
-    "phone": "+91 98765 43210",
+    "phone": "+919146025252 / +919154975333",
     "email": "booking@durgbhumi.com",
-    "address": "DurgBhumi, Forest Road, Green Valley, 492001"
+    "address": "Gate no . 27 Bhatti waghdara , velhe , Near gunjavani dam gate. Pune - 412115",
+    "socialMedia": {
+      "facebook": "https://www.facebook.com/durgbhumiresort",
+      "instagram": "https://www.instagram.com/durgbhumiresort",
+      "twitter": "https://twitter.com/durgbhumiresort"
+    },
+    "directions": {
+      "mumbaiToVelhe": "~217 km (4 hrs drive) via Pune route",
+      "mumbaiToTornaFort": "~195–226 km (3–4 hrs drive)",
+      "puneToVelhe": "~46–50 km (1.5–2 hrs drive)"
+    }
   }
 }
 

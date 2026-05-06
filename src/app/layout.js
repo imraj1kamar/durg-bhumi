@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "./components/BootstrapClient";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FloatingEnquiry from "./components/FloatingEnquiry"; 
 
 const poppins = Poppins({
   variable: "--font-primary",
@@ -103,7 +104,8 @@ export default function RootLayout({ children }) {
         <Navbar/>
         <BootstrapClient />
         {children}
-        <Footer/>
+<Footer/>
+        <FloatingEnquiry />
       </body>
     </html>
   );
