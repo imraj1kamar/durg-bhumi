@@ -1,17 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import resortData from "@/data/resort-data.json";
 import styles from "./Animations.module.css";
 
 export default function Hero() {
   const { resort } = resortData;
-  const [isLoaded, setIsLoaded] = useState(false);
+  const heroRef = useRef(null);
 
   useEffect(() => {
-    // Trigger animation on mount
-    const timer = setTimeout(() => setIsLoaded(true), 100);
+    // Keep the initial React render stable to avoid hydration mismatch.
+    // Trigger animation after mount by toggling a DOM class.
+    const el = heroRef.current;
+    if (!el) return;
+
+    const timer = setTimeout(() => {
+      el.classList.add(styles.animateIn);
+    }, 100);
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -40,14 +47,20 @@ export default function Hero() {
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(to bottom, rgba(31,31,31,0.5), rgba(47,36,28,0.7))",
+            background:
+              "linear-gradient(to bottom, rgba(31,31,31,0.5), rgba(47,36,28,0.7))",
           }}
         />
       </div>
 
       {/* Content */}
-      <div className="container" style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-        <div className={`${styles.heroContent} ${isLoaded ? styles.animateIn : ""}`}>
+      <div
+        className="container"
+        style={{ position: "relative", zIndex: 1, textAlign: "center", marginTop: "var(--space-xl)" }}
+      >
+        <div ref={heroRef} className={styles.heroContent} >
+
+
           <p
             style={{
               color: "var(--accent-color)",
@@ -82,7 +95,14 @@ export default function Hero() {
           >
             {resort.description}
           </p>
-          <div style={{ display: "flex", gap: "var(--space-md)", justifyContent: "center", flexWrap: "wrap" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "var(--space-md)",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
             <a href="#rooms" className="btn-primary">
               Explore Rooms
             </a>
@@ -115,3 +135,4 @@ export default function Hero() {
     </section>
   );
 }
+

@@ -76,6 +76,14 @@
   transform: translateY(0);
 }
 
+/* Responsive tweak (was previously via styled-jsx inside Hero.js) */
+@media (max-width: 340px) {
+  #home .heroContent {
+    margin-top: 50px;
+  }
+}
+
+
 /* Responsive - reduce animation on mobile */
 @media (max-width: 767px) {
   .fadeInUp,

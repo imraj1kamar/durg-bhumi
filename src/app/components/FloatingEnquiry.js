@@ -1,13 +1,17 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
-import styles from './FloatingEnquiry.module.css';
+import { useState, useRef, useEffect, useId } from "react";
+import styles from "./FloatingEnquiry.module.css";
 
 export default function FloatingEnquiry() {
+
   const [open, setOpen] = useState(false);
   const [hover, setHover] = useState(false);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
   const [statusType, setStatusType] = useState(""); // "success" or "error"
+
+
+
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -15,6 +19,8 @@ export default function FloatingEnquiry() {
   const messageRef = useRef(null);
 
   const handleSubmit = async () => {
+    // Prevent double submit
+    if (loading) return;
     // Simple validation
     if (!nameRef.current?.value.trim()) {
       setStatus("Please enter your name");
@@ -93,7 +99,11 @@ export default function FloatingEnquiry() {
 
   return (
     <>
-      <div className={`${styles.backdrop} ${open ? styles.open : ''}`} onClick={() => setOpen(false)} />
+      <div
+        style={{ display: "none" }}
+        className={`${styles.backdrop} ${open ? styles.open : ""}`}
+        onClick={() => setOpen(false)}
+      />
       <div className={styles.floatingWrapper}>
         {/* Tooltip */}
         {!open && hover && (

@@ -14,7 +14,7 @@ export default function Home() {
   return (
    
 <><Hero />
-      <div className="container">
+      <div className="container" >
          
         <About />
         <Rooms />
