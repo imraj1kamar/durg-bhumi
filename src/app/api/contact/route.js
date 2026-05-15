@@ -33,13 +33,23 @@ export async function POST(req) {
     }
 
     // Transporter
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+
+    if (!smtpUser || !smtpPass) {
+      return NextResponse.json({
+        success: false,
+        message: "Missing SMTP credentials. Please set SMTP_USER and SMTP_PASS in Vercel Environment Variables.",
+      });
+    }
+
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
       secure: true,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: smtpPass,
       },
     });
 
