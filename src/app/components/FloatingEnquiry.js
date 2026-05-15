@@ -16,6 +16,7 @@ export default function FloatingEnquiry() {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
+  const subjectRef = useRef(null);
   const messageRef = useRef(null);
 
   const handleSubmit = async () => {
@@ -48,6 +49,7 @@ export default function FloatingEnquiry() {
       email,
       phone: phoneRef.current?.value.trim() || "",
       message: messageRef.current.value.trim(),
+      subject: subjectRef.current?.value.trim() || "",
     };
 
     setLoading(true);
@@ -72,6 +74,7 @@ export default function FloatingEnquiry() {
         if (nameRef.current) nameRef.current.value = "";
         if (emailRef.current) emailRef.current.value = "";
         if (phoneRef.current) phoneRef.current.value = "";
+        if (subjectRef.current) subjectRef.current.value = "";
         if (messageRef.current) messageRef.current.value = "";
         // Auto close after 2s
         setTimeout(() => setOpen(false), 2000);
@@ -140,45 +143,81 @@ export default function FloatingEnquiry() {
 
 
                 <div className={styles.formGroup}>
-                  <label htmlFor="name">Your Name *</label>
-                  <input
-                    id="name"
-                    ref={nameRef}
-                    className={styles.inputField}
-                    required
-                  />
+                  <div className={styles.field}>
+                    <input
+                      id="name"
+                      ref={nameRef}
+                      className={styles.inputField}
+                      required
+                      placeholder=" "
+                    />
+                    <label htmlFor="name" className={styles.floatingLabel}>
+                      Your Name *
+                    </label>
+                  </div>
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label htmlFor="email">Email *</label>
-                  <input
-                    id="email"
-                    ref={emailRef}
-                    type="email"
-                    className={styles.inputField}
-                    required
-                  />
+                  <div className={styles.field}>
+                    <input
+                      id="email"
+                      ref={emailRef}
+                      type="email"
+                      className={styles.inputField}
+                      required
+                      placeholder=" "
+                    />
+                    <label htmlFor="email" className={styles.floatingLabel}>
+                      Email *
+                    </label>
+                  </div>
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label htmlFor="phone">Phone</label>
-                  <input
-                    id="phone"
-                    ref={phoneRef}
-                    type="tel"
-                    className={styles.inputField}
-                  />
+                  <div className={styles.field}>
+                    <input
+                      id="phone"
+                      ref={phoneRef}
+                      type="tel"
+                      className={styles.inputField}
+                      placeholder=" "
+                    />
+                    <label htmlFor="phone" className={styles.floatingLabel}>
+                      Phone
+                    </label>
+                  </div>
                 </div>
 
                 <div className={styles.formGroup}>
-                  <label htmlFor="message">Message *</label>
-                  <textarea
-                    id="message"
-                    ref={messageRef}
-                    className={styles.textareaField}
-                    required
-                  />
+                  <div className={styles.field}>
+                    <input
+                      id="subject"
+                      ref={subjectRef}
+                      type="text"
+                      className={styles.inputField}
+                      placeholder=" "
+                    />
+                    <label htmlFor="subject" className={styles.floatingLabel}>
+                      Subject
+                    </label>
+                  </div>
                 </div>
+
+                <div className={styles.formGroup}>
+                  <div className={styles.field}>
+                    <textarea
+                      id="message"
+                      ref={messageRef}
+                      className={styles.textareaField}
+                      required
+                      placeholder=" "
+                    />
+                    <label htmlFor="message" className={styles.floatingLabel}>
+                      Message *
+                    </label>
+                  </div>
+                </div>
+
 
 
 
